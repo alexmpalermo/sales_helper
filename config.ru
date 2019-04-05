@@ -6,5 +6,6 @@ if ActiveRecord::Migrator.needs_migration?
 end 
 
 use Rack::MethodOverride
-use RepresentativessController
+use RepresentativesController
+use CustomersController
 run ApplicationController
