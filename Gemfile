@@ -12,6 +12,7 @@ gem 'rack-test'
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'capybara'
 gem 'require_all'
+gem 'bcrypt'
 
 # Specify your gem's dependencies in sales-helper.gemspec
 gemspec
