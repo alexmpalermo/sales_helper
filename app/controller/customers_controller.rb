@@ -49,9 +49,17 @@ class CustomersController < ApplicationController
         @customer.items << @item 
         @customer.save 
       end 
+      redirect to "/customers/#{@customer.slug}"
   end 
   
   delete '/customers/:slug/delete' do 
-    
+   if logged_in?
+    @customer = Customer.find_by_slug(params[:slug])
+    @representative = Representative.find_by_id(@customer.representative_id)
+    if @representative == current_user 
+    @customer.destroy
+  end
+    redirect to "/representatives/#{@representative.slug}"
   end 
+  end
 end

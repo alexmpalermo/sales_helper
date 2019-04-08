@@ -9,8 +9,11 @@
   <label>Update Items puchased: </label>
   <br>
   <% @customer.items.each do |item| %>
-  <label for="item_<%= item.id %>"><%= item.name %></label>
-  <input type="text" name="<%= item.id %>" id="item_<%= item.id %>" value="<%= item.id %>"/>
+  <label><%= item.name %></label>
+  <br>
+  <label for="item_<%= item.id %>">Quantity: </label>
+  <input type="text" name="<%= item.id %>" id="item_<%= item.id %>" />
+  <br>
   <% end %>
   <br>
   <label>Add new items: </label>
@@ -45,5 +48,12 @@
   <label for="quantity6">Quantity: </label>
   <input type="text" name="customer[items][][quantity]" id="quantity6" />
   <br>
-  <input type="submit" value="Create Customer" />
+  <input type="submit" value="Save" />
+</form>
+<br>
+<br>
+<br>
+<form action="/customers/<%= @customer.slug %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete Customer" />
 </form>
