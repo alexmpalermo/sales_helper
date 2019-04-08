@@ -1,0 +1,58 @@
+<h1><%= @customer.name %></h1>
+<h3><%= @customer.contact %></h3>
+<% now = @ %>
+
+<% sixty_days_ago = (now - 60) %>
+
+
+<br>
+<p>NEED: </p>
+
+<% @customer.items.each do |item| %>
+<% now = item.date %>
+<% ninety_days_ago = (now - 90) %>
+<% one_year_ago = (now - 365) %>
+<% if one_year_ago > item.date && item.date > ninety_days_ago %>
+<ul>
+  <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
+</ul>
+<% end %>
+<% end %>
+
+<p>RUNNING LOW: </p>
+
+<% @customer.items.each do |item| %>
+<% now = item.date %>
+<% ninety_days_ago = (now - 90) %>
+<% sixty_days_ago = (now - 60) %>
+<% if ninety_days_ago > item.date && item.date > sixty_days_ago %>
+<ul>
+  <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
+</ul>
+<% end %>
+<% end %>
+
+<p>JUST BOUGHT: </p>
+
+<% @customer.items.each do |item| %>
+<% now = item.date %>
+<% sixty_days_ago = (now - 60) %>
+<% if item.date < sixty_days_ago %>
+<ul>
+  <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
+</ul>
+<% end %>
+<% end %>
+
+<p>NOT PUCHASED IN OVER A YEAR: </p>
+
+<% @customer.items.each do |item| %>
+<% now = item.date %>
+<% one_year_ago = (now - 365) %>
+<% if item.date > one_year_ago %>
+<ul>
+  <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
+</ul>
+<% end %>
+<% end %>
+

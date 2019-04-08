@@ -21,17 +21,5 @@ class ApplicationController < Sinatra::Base
       Representative.find_by_id(session[:representative_id])
     end
     
-    def login(username, password)
-      rep = Representative.find_by(:username => username)
-      if rep && rep.authenticate(password) 
-        session[:username] = rep.username
-      else 
-        redirect to "/login" 
-      end 
-    end 
-    
-    def logout!
-      session.clear
-    end 
   end 
 end 
