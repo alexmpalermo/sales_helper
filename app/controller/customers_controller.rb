@@ -28,12 +28,9 @@ class CustomersController < ApplicationController
         @item = Item.create(details)
         @item.date = @date 
         @customer.items << @item 
+        @customer.save 
       end
       
-    
-    
-    @customer.save
-    
     redirect to "/customers/#{@customer.slug}"
   end 
   
