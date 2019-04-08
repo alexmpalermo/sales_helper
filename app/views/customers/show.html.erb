@@ -14,29 +14,40 @@
 <ul>
   <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
 </ul>
+<% end %>
+<% end %>
 
 
 <p>RUNNING LOW: </p>
 
-<% elsif now.between?(today - 90, today - 60) %>
+<% @customer.items.each do |item| %>
+<% now = item.date.to_date %>
+<% today = Date.current %>
+<% if now.between?(today - 90, today - 60) %>
 <ul>
   <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
 </ul>
-
+<% end %>
+<% end %>
 
 <p>JUST BOUGHT: </p>
 
-<% elsif now.between?(today - 60, today) %>
-
+<% @customer.items.each do |item| %>
+<% now = item.date.to_date %>
+<% today = Date.current %>
+<% if now.between?(today - 60, today) %>
 <ul>
   <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
 </ul>
-
-
+<% end %>
+<% end %>
 
 <p>NOT PUCHASED IN OVER A YEAR: </p>
 
-<% else %>
+<% @customer.items.each do |item| %>
+<% now = item.date.to_date %>
+<% today = Date.current %>
+<% if now.between?(today - 365, today - 10000) %>
 <ul>
   <li><%= item.name %>, <%= item.quantity %> purchased on <%= item.date %></li>
 </ul>
