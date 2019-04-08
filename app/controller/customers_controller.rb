@@ -26,10 +26,6 @@ class CustomersController < ApplicationController
     redirect to "/customers/#{@customer.slug}"
   end 
   
-  post '/add' do 
-    
-  end 
-  
   patch '/customers/:slug' do 
     
   end 
