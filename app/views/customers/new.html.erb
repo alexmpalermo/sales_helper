@@ -1,59 +1,29 @@
 
 <form action="/customers" method="POST">
   <label for="name">Account name: </label>
-  <input type="text" name="name" id="name" />
+  <input type="text" name="customer[name]" id="name" />
   <br>
   <label for="contact">Contact name: </label>
-  <input type="text" name="contact" id="contact" />
+  <input type="text" name="customer[contact]" id="contact" />
   <br>
   <label>Items puchased: </label>
   <br>
-  <label for="itemname">Item name: </label>
-  <input type="text" name="items[name]" id="itemname" />
-  <label for="quantity">Quantity: </label>
-  <input type="text" name="items[quantity]" id="quantity" />
+  <label for="itemname1">Item name: </label>
+  <input type="text" name="customer[items][][name]" id="itemname1" />
+  <label for="quantity1">Quantity: </label>
+  <input type="text" name="customer[items][][quantity]" id="quantity1" />
+  <br>
+  <label for="itemname2">Item name: </label>
+  <input type="text" name="customer[items][][name]" id="itemname2" />
+  <label for="quantity2">Quantity: </label>
+  <input type="text" name="customer[items][][quantity]" id="quantity2" />
+  <br>
+  <label for="itemname3">Item name: </label>
+  <input type="text" name="customer[items][][name]" id="itemname3" />
+  <label for="quantity3">Quantity: </label>
+  <input type="text" name="customer[items][][quantity]" id="quantity3" />
+  <br>
   
   
-  
-  <label>Gloves</label>
-  <br>
-  <label for="gloves">Quantity: </label>
-  <input type="text" name="items[gloves]" id="gloves" />
-  <br>
-  <label>Masks</label>
-  <br>
-  <label for="masks">Quantity: </label>
-  <input type="text" name="items[masks]" id="masks" />
-  <br>
-  <label>Gauze</label>
-  <br>
-  <label for="gauze">Quantity: </label>
-  <input type="text" name="items[gauze]" id="gauze" />
-  <br>
-  <label>Lidocaine</label>
-  <br>
-  <label for="lidocaine">Quantity: </label>
-  <input type="text" name="items[lidocaine]" id="lidocaine" />
-  <br>
-  <label>Wipes</label>
-  <br>
-  <label for="wipes">Quantity: </label>
-  <input type="text" name="items[wipes]" id="wipes" />
-  <br>
-  <label>Autoclaves</label>
-  <br>
-  <label for="autoclaves">Quantity: </label>
-  <input type="text" name="items[autoclaves]" id="autoclaves" />
-  <br>
-  <label>Sterilization Pouches</label>
-  <br>
-  <label for="pouches">Quantity: </label>
-  <input type="text" name="items[pouches]" id="pouches" />
-  <br>
-  <label>Benzocaine Gel</label>
-  <br>
-  <label for="gel">Quantity: </label>
-  <input type="text" name="items[gel]" id="gel" />
-  <br>
   <input type="submit" value="Create Customer" />
 </form>

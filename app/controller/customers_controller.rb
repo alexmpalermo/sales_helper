@@ -20,15 +20,17 @@ class CustomersController < ApplicationController
   end 
   
   post '/customers' do 
-    @customer = Customer.create(name: params[:name], contact: params[:contact])
+    @customer = Customer.create(params[:customer])
     @customer.representative = current_user
     @date = Date.today.to_formatted_s(:long)
     
-    params["item"].each do |item|
-    if item[:name] != "" 
-      Item.create(name: item[:name], quantity: item[:quantity], date: @date, customer_id: @customer.id)
-    end 
-  end 
+    params[:customer][:items].each do |details|
+        @item = Item.create(details)
+        @item.date = @date 
+        @customer.items << @item 
+      end
+      
+    
     
     @customer.save
     
