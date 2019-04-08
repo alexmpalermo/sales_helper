@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 20190405194955) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.string "quantity"
-    t.string "date"
   end
 
   create_table "representatives", force: :cascade do |t|
