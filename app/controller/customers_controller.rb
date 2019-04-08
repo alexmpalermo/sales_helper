@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+ 
   
   get '/customers/new' do 
     if logged_in?
@@ -17,6 +18,15 @@ class CustomersController < ApplicationController
   end 
   
   post '/customers' do 
+    @customer = Customer.create(name: params[:name], contact: params[:contact])
+    @customer.representative = current_user
+    
+    @customer.save
+    
+    redirect to "/customers/#{@customer.slug}"
+  end 
+  
+  post '/add' do 
     
   end 
   
