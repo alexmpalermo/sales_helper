@@ -14,6 +14,7 @@ class CustomersController < ApplicationController
   get '/customers/:slug' do 
     if logged_in?
     @customer = Customer.find_by_slug(params[:slug])
+  
     erb :"/customers/show.html"
   else 
     redirect to "/login"
@@ -34,14 +35,17 @@ class CustomersController < ApplicationController
     @customer.representative = current_user
     @date = Date.today.to_formatted_s(:long)
     
-    params[:customer][:items].each do |details|
+    params[:items].each do |details|
+    
+      if details[:name] != "" && details[:quantity] != ""
         @item = Item.create(details)
         @item.date = @date 
         @customer.items << @item 
         @customer.save 
+      end 
       end
-      
     redirect to "/customers/#{@customer.slug}"
+    
   end 
   
   patch '/customers/:slug' do 
@@ -54,11 +58,13 @@ class CustomersController < ApplicationController
     end 
   end 
     params[:customer][:items].each do |details|
+      if details[:name] != "" && details[:quantity] != ""
         @item = Item.create(details)
         @item.date = @date 
         @customer.items << @item 
         @customer.save 
       end 
+    end 
       redirect to "/customers/#{@customer.slug}"
   end 
   
