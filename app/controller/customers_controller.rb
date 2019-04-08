@@ -1,3 +1,5 @@
+require 'date'
+
 class CustomersController < ApplicationController
  
   
@@ -20,16 +22,14 @@ class CustomersController < ApplicationController
   post '/customers' do 
     @customer = Customer.create(name: params[:name], contact: params[:contact])
     @customer.representative = current_user
-    @items = []
-    @items << Item.create(name: "Gloves", quantity: params["gloves"])
-    @items << Item.create(name: "Masks", quantity: params["masks"])
-    @items << Item.create(name: "Gauze", quantity: params["gauze"])
-    @items << Item.create(name: "Lidocaine", quantity: params["lidocaine"])
-    @items << Item.create(name: "Benzocaine Gel", quantity: params["gel"])
-    @items << Item.create(name: "Autoclaves", quantity: params["autoclaves"])
-    @items << Item.create(name: "Sterilization Pouches", quantity: params["pouches"])
-    @items << Item.create(name: "Wipes", quantity: params["wipes"])
-    @customer.items = @items
+    @date = Date.today.to_formatted_s(:long)
+    
+    params["item"].each do |item|
+    if item[:name] != "" 
+      Item.create(name: item[:name], quantity: item[:quantity], date: @date, customer_id: @customer.id)
+    end 
+  end 
+    
     @customer.save
     
     redirect to "/customers/#{@customer.slug}"
