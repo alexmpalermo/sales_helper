@@ -1,6 +1,7 @@
 <h3>Sales Helper</h3>
 <a href="/logout">Log Out</a>
 
+<h2>Edit this customer</h2>
 <form action="/customers/<%= @customer.slug %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
   <label>Account name: </label>

@@ -1,6 +1,7 @@
 <h3>Sales Helper</h3>
 <a href="/logout">Log Out</a>
 
+<h2>Create a new customer</h2>
 <form action="/customers" method="POST">
   <label for="name">Account name: </label>
   <input type="text" name="customer[name]" id="name" />
@@ -40,5 +41,5 @@
   <label for="quantity6">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity6" />
   <br>
-  <input type="submit" value="Create Customer" />
+  <button type="submit">Create Customer</button>
 </form>
