@@ -101,6 +101,22 @@ html, body {
     margin: 0;
 }
 
+.main {
+  font-size: 45px;
+}
+
+.description {
+  font-family: ;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  text-shadow:
+		-0.5px -0.5px 0 #000,
+		0.5px -0.5px 0 #000,
+		-0.5px 0.5px 0 #000,
+		0.5px 0.5px 0 #000;
+	padding: 60px 0 0;
+}
 
 /*//////////// Footer ////////////*/
 
