@@ -58,6 +58,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   height: 100%;
 }
 
+.signup {
+  background: url("https://imgur.com/YfbRBVh.jpg") no-repeat center center fixed;
+}
+
+
 /*//////////// Customer Show ////////////*/
 
 .need {
