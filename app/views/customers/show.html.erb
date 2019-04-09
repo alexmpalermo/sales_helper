@@ -1,8 +1,14 @@
 <% require 'date' %>
-<navbar>
-<h3>Sales Helper</h3>
-<a href="/logout">Log Out</a>
-</navbar>
+<header class="medium-fade shadow">
+  <div class="wrapper">
+    <div id="logo">
+      <h1>Sales Helper</h1>
+    </div>
+    <div id="link">
+      <a href="/logout">Log Out</a>
+    </div>
+  </div>
+</header>
 
 <h1><%= @customer.name %></h1>
 <h3><%= @customer.contact %></h3>
