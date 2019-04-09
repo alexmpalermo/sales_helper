@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 /*//////////// Header ////////////*/
 
 .wrapper {
@@ -10,17 +12,18 @@ header {
 }
 
 #logo {
-  padding: 84px 0 0;
+  text-align: center;
+  padding: 10px 0 10px;
 } 
 
 #logo h1 {
   font-family: 'Lobster', cursive;
   margin: 0;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
 	color: white;
 }
 
@@ -30,9 +33,10 @@ header {
 
 #link {
   position: absolute;
-    top: 82px;
-    right: 4px;
+    top: 30px;
+    right: 20px;
     width: auto;
+    font-size: 1.15em;
 }
 
 /*//////////// Backgrounds ////////////*/
