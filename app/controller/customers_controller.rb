@@ -50,14 +50,19 @@ class CustomersController < ApplicationController
   
   patch '/customers/:slug' do 
     @customer = Customer.find_by_slug(params[:slug])
-    @customer.update(params[:customer])
+    if params[:customer][:name] != "" 
+    @customer.update(name: params[:customer][:name])
+  end 
+    if params[:customer][:contact] != ""
+      @customer.update(contact: params[:customer][:contact])
+    end 
     @date = Date.today.to_formatted_s(:long)
       @customer.items.each do |item|
       if params["#{item.id}"] != ""
       item.update(quantity: params["#{item.id}"], date: @date)
     end 
   end 
-    params[:customer][:items].each do |details|
+    params[:items].each do |details|
       if details[:name] != "" && details[:quantity] != ""
         @item = Item.create(details)
         @item.date = @date 
