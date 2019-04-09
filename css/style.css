@@ -1,3 +1,27 @@
+/*//////////// Header ////////////*/
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  margin: 0 0 30px;
+}
+
+#logo {
+  padding: 84px 0 0;
+  font-family: 'Lobster', cursive;
+  margin: 0;
+} 
+
+
+#link {
+  
+}
+
+/*//////////// Customer Show ////////////*/
+
 .need {
   color: #e60000;
 }
