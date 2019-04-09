@@ -1,12 +1,14 @@
 <% require 'date' %>
-
+<h3>Sales Helper</h3>
+<a href="/logout">Log Out</a>
 
 <h1><%= @customer.name %></h1>
 <h3><%= @customer.contact %></h3>
 <br>
 <button><a href ="/customers/<%= @customer.slug %>/edit">Edit Account</a></button>
 
-<p>NEED: </p>
+<div>
+<p class="categories">NEED: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -17,9 +19,10 @@
 </ul>
 <% end %>
 <% end %>
+</div>
 
-
-<p>RUNNING LOW: </p>
+<div>
+<p class="categories">RUNNING LOW: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -30,8 +33,10 @@
 </ul>
 <% end %>
 <% end %>
+</div> 
 
-<p>JUST BOUGHT: </p>
+<div>
+<p class="categories">JUST BOUGHT: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -42,8 +47,10 @@
 </ul>
 <% end %>
 <% end %>
+</div>
 
-<p>NOT PUCHASED IN OVER A YEAR: </p>
+<div>
+<p class="categories">NOT PUCHASED IN OVER A YEAR: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -54,4 +61,4 @@
 </ul>
 <% end %>
 <% end %>
-
+</div>

@@ -1,22 +1,27 @@
+<h3>Sales Helper</h3>
+<a href="/logout">Log Out</a>
+
 <form action="/customers/<%= @customer.slug %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
-  <label for="name">Account name: </label>
+  <label>Account name: </label>
+  <br>
+  <label for="name"><%= @customer.name %></label>
   <input type="text" name="customer[name]" id="name" />
   <br>
-  <label for="contact">Contact name: </label>
+  <label>Contact name: </label>
+  <br>
+  <label for="contact"><%= @customer.contact %></label>
   <input type="text" name="customer[contact]" id="contact" />
   <br>
-  <label>Update Items puchased: </label>
+  <label>Quantity: </label>
   <br>
   <% @customer.items.each do |item| %>
-  <label><%= item.name %></label>
-  <br>
-  <label for="item_<%= item.id %>">Quantity: </label>
+  <label for="item_<%= item.id %>"><%= item.name %></label>
   <input type="text" name="<%= item.id %>" id="item_<%= item.id %>" />
   <br>
   <% end %>
   <br>
-  <label>Add new items: </label>
+  <label>New Purchases: </label>
   <br>
   <label for="itemname1">Item name: </label>
   <input type="text" name="items[][name]" id="itemname1" />
@@ -48,12 +53,11 @@
   <label for="quantity6">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity6" />
   <br>
-  <input type="submit" value="Save" />
+  <button type="submit">Save</button> 
 </form>
-<br>
 <br>
 <br>
 <form action="/customers/<%= @customer.slug %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete" />
-  <input type="submit" value="Delete Customer" />
+  <button type="submit">Delete Account</button>
 </form>

@@ -8,6 +8,6 @@
 
 <ol>
   <% @representative.customers.each do |customer| %>
-  <li><a href="/customers/<%= customer.slug %>"><%= customer.name%></a></li>
+  <li><a href="/customers/<%= customer.slug %>"><%= customer.name%> - <%= customer.contact %></a></li>
   <% end %>
 </ol>
