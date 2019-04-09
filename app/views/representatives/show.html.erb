@@ -1,4 +1,10 @@
-<h2>Welcome, <%= @representative.name %></h2>
+<h3>Sales Helper</h3>
+<a href="/logout">Log Out</a>
+
+<h1><%= @representative.name %></h1>
+<h3><%= @representative.territory %></h3>
+<br>
+<p>Choose a customer below or <button><a href="/customers/new">Add A Customer</a></button></p>
 
 <ol>
   <% @representative.customers.each do |customer| %>
