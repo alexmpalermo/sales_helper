@@ -50,7 +50,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .background {
-  background: url("https://imgur.com/jVhyEdt.jpg") no-repeat center top;
+  background: url("https://imgur.com/jVhyEdt.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -89,5 +92,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   line-height: 0;
 }
 
+/*//////////// Footer ////////////*/
 
-
+footer {
+  padding: 10px;
+  background: #E1C0E2;
+  border-top: 1px solid;
+}
