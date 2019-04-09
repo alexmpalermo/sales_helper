@@ -1,6 +1,8 @@
 <% require 'date' %>
+<navbar>
 <h3>Sales Helper</h3>
 <a href="/logout">Log Out</a>
+</navbar>
 
 <h1><%= @customer.name %></h1>
 <h3><%= @customer.contact %></h3>
@@ -8,7 +10,7 @@
 <button><a href ="/customers/<%= @customer.slug %>/edit">Edit Account</a></button>
 
 <div>
-<p class="categories">NEED: </p>
+<p class="need">NEED: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -22,7 +24,7 @@
 </div>
 
 <div>
-<p class="categories">RUNNING LOW: </p>
+<p class="running_low">RUNNING LOW: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -36,7 +38,7 @@
 </div> 
 
 <div>
-<p class="categories">JUST BOUGHT: </p>
+<p class="just_bought">JUST BOUGHT: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -50,7 +52,7 @@
 </div>
 
 <div>
-<p class="categories">NOT PUCHASED IN OVER A YEAR: </p>
+<p class="one_year">NOT PUCHASED IN OVER A YEAR: </p>
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
