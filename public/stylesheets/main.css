@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Yeseva+One');
 
 /*//////////// Header ////////////*/
 
@@ -106,17 +106,19 @@ html, body {
 }
 
 .description {
-  font-family: ;
+  font-family: 'Yeseva One', cursive;
   text-align: center;
   font-size: 1.5em;
   color: white;
   text-shadow:
-		-0.5px -0.5px 0 #000,
-		0.5px -0.5px 0 #000,
-		-0.5px 0.5px 0 #000,
-		0.5px 0.5px 0 #000;
+		-0.5px -0.5px 8px #000,
+		0.5px -0.5px 8px #000,
+		-0.5px 0.5px 8px #000,
+		0.5px 0.5px 8px #000;
 	padding: 60px 0 0;
 }
+
+
 
 /*//////////// Footer ////////////*/
 
