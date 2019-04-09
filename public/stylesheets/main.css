@@ -55,6 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
 }
 
 /*//////////// Customer Show ////////////*/
@@ -91,6 +92,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   height: 0;
   line-height: 0;
 }
+
+/*//////////// Layout ////////////*/
+
+html, body {
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+
 
 /*//////////// Footer ////////////*/
 
