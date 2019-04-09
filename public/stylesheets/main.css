@@ -50,7 +50,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .background {
-  background: url('https://imgur.com/7dKoRZW') no-repeat center top;
+  background: url("https://imgur.com/jVhyEdt.jpg") no-repeat center top;
   background-size: cover;
 }
 
