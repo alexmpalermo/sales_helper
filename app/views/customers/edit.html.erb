@@ -1,3 +1,4 @@
+<div class="background edit">
 <header class="medium-fade shadow">
   <div class="wrapper">
     <div id="logo">
@@ -13,6 +14,7 @@
 <a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
 </div>
 
+<div class="form shadow">
 <h2>Edit this customer</h2>
 <form action="/customers/<%= @customer.slug %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
@@ -68,9 +70,11 @@
   <br>
   <button type="submit">Save</button> 
 </form>
+</div>
 <br>
 <br>
 <form action="/customers/<%= @customer.slug %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete" />
   <button type="submit">Delete Account</button>
 </form>
+</div>

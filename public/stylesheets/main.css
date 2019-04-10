@@ -75,7 +75,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .custshow {
-  background: url("https://imgur.com/57DiqtN.jpg") no-repeat center center fixed;
+  background: url("https://imgur.com/Rs5UI4T.jpg") no-repeat center center fixed;
+}
+
+.edit {
+  background: url("https://imgur.com/xDEdKvx.jpg") no-repeat center center fixed;
 }
 
 /*//////////// Forms ////////////*/
@@ -230,11 +234,13 @@ html, body {
 #custname {
   font-size: 1.2em;
   color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #custcontact {
   font-size: 1em;
   color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 /*//////////// Buttons ////////////*/

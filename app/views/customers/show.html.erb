@@ -28,7 +28,10 @@
 <button id="editdelete"><a href ="/customers/<%= @customer.slug %>/edit">Edit Account</a></button>
 </div>
 <div class="move">
-<button id="editdelete"><a href ="/customers/<%= @customer.slug %>/delete">Delete Account</a></button>
+<form action="/customers/<%= @customer.slug %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete" />
+  <button id="editdelete" type="submit">Delete Account</button>
+</form>
 </div>
 <br>
 <br>
