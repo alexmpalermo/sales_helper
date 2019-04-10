@@ -9,6 +9,10 @@
   </div>
 </header>
 
+<div class="addcust">
+<a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
+</div>
+
 <h2>Edit this customer</h2>
 <form action="/customers/<%= @customer.slug %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
