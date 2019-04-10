@@ -161,6 +161,13 @@ html, body {
 
 #repname {
   text-align: center;
+  padding: 1px 0 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  background: #f0e6f0;
+  width: 40%;
+  
 }
 
 #repname h1 {
@@ -192,6 +199,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4cee5', end
 
 button:hover {
   background: #A0318C; 
+}
+
+#addcustomer {
+  font-size: 1em;
+  width: 130px;
+  height: 30px;
 }
 
 /*//////////// Links ////////////*/
