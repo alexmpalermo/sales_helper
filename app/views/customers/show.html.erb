@@ -14,9 +14,13 @@
 <a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
 </div>
 
-<div class="customer">
+<div class="customer Yeseva">
+  <div id="custname">
 <h1><%= @customer.name %></h1>
+</div>
+<div id="custcontact">
 <h3><%= @customer.contact %></h3>
+</div>
 </div>
 <br>
 <div class="move2">
@@ -25,6 +29,7 @@
 <div class="move">
 <button id="editdelete"><a href ="/customers/<%= @customer.slug %>/delete">Delete Account</a></button>
 </div>
+<br>
 <br>
 <br>
 <br>

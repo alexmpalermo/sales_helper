@@ -144,7 +144,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .customer {
-  padding: 1px;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
@@ -219,6 +218,14 @@ html, body {
 
 #repname h3 {
   font-size: 1.75em;
+}
+
+#custname {
+  font-size: 1.2em;
+}
+
+#custcontact {
+  font-size: 1em;
 }
 
 /*//////////// Buttons ////////////*/
