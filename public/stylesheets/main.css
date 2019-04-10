@@ -295,12 +295,8 @@ button:hover {
 
 /*//////////// Links ////////////*/
 
-a:link {
+a:link, a:visited, a:active {
   text-decoration: none;
-  color: black;
-}
-
-a:visited {
   color: black;
 }
 

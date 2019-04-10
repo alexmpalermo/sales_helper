@@ -21,7 +21,7 @@ class RepresentativesController < ApplicationController
   get '/logout' do
     if logged_in?
       session.clear
-      redirect to "/login"
+      redirect to "/"
     else
       redirect to "/"
       end
