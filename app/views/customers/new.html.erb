@@ -11,49 +11,68 @@
 </header>
 
 <div class="addcust">
-<a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
+<a href="/representatives/<%= current_user.slug %>">Accounts</a>
 </div>
 
+<div class="form shadow">
+<div id="signlog">
 <h2>Create a new customer</h2>
+</div>
 <form action="/customers" method="POST">
   <label for="name">Account name: </label>
   <input type="text" name="customer[name]" id="name" />
   <br>
+  <br>
   <label for="contact">Contact name: </label>
   <input type="text" name="customer[contact]" id="contact" />
   <br>
+  <br>
   <label>Items puchased: </label>
+  <br>
   <br>
   <label for="itemname1">Item name: </label>
   <input type="text" name="items[][name]" id="itemname1" />
+  <br>
   <label for="quantity1">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity1" />
   <br>
+  <br>
   <label for="itemname2">Item name: </label>
   <input type="text" name="items[][name]" id="itemname2" />
+  <br>
   <label for="quantity2">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity2" />
   <br>
+  <br>
   <label for="itemname3">Item name: </label>
   <input type="text" name="items[][name]" id="itemname3" />
+  <br>
   <label for="quantity3">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity3" />
   <br>
+  <br>
   <label for="itemname4">Item name: </label>
   <input type="text" name="items[][name]" id="itemname4" />
+  <br>
   <label for="quantity4">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity4" />
   <br>
+  <br>
   <label for="itemname5">Item name: </label>
   <input type="text" name="items[][name]" id="itemname5" />
+  <br>
   <label for="quantity5">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity5" />
   <br>
+  <br>
   <label for="itemname6">Item name: </label>
   <input type="text" name="items[][name]" id="itemname6" />
+  <br>
   <label for="quantity6">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity6" />
   <br>
+  <br>
   <button type="submit">Create Customer</button>
 </form>
+</div>
 </div>

@@ -79,7 +79,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .edit {
-  background: url("https://imgur.com/xDEdKvx.jpg") no-repeat center center fixed;
+  background: url("https://imgur.com/2RkSa9H.jpg") no-repeat center center fixed;
 }
 
 /*//////////// Forms ////////////*/
@@ -91,6 +91,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   margin-bottom: 20px;
   background: white;
   width: 30%;
+  overflow: auto;
 }
 
 #signlog {

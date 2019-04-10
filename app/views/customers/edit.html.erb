@@ -15,7 +15,9 @@
 </div>
 
 <div class="form shadow">
-<h2>Edit this customer</h2>
+  <div id="signlog">
+  <h2>Edit this customer</h2>
+  </div>
 <form action="/customers/<%= @customer.slug %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
   <label>Account name: </label>
@@ -43,38 +45,40 @@
   <label for="quantity1">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity1" />
   <br>
+  <br>
   <label for="itemname2">Item name: </label>
   <input type="text" name="items[][name]" id="itemname2" />
   <label for="quantity2">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity2" />
+  <br>
   <br>
   <label for="itemname3">Item name: </label>
   <input type="text" name="items[][name]" id="itemname3" />
   <label for="quantity3">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity3" />
   <br>
+  <br>
   <label for="itemname4">Item name: </label>
   <input type="text" name="items[][name]" id="itemname4" />
   <label for="quantity4">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity4" />
+  <br>
   <br>
   <label for="itemname5">Item name: </label>
   <input type="text" name="items[][name]" id="itemname5" />
   <label for="quantity5">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity5" />
   <br>
+  <br>
   <label for="itemname6">Item name: </label>
   <input type="text" name="items[][name]" id="itemname6" />
   <label for="quantity6">Quantity: </label>
   <input type="text" name="items[][quantity]" id="quantity6" />
   <br>
+  <br>
+  <div class="buttons">
   <button type="submit">Save</button> 
+  </div>
 </form>
 </div>
-<br>
-<br>
-<form action="/customers/<%= @customer.slug %>/delete" method="POST">
-  <input type="hidden" id="hidden" name="_method" value="delete" />
-  <button type="submit">Delete Account</button>
-</form>
 </div>
