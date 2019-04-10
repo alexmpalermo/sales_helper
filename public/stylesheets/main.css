@@ -74,6 +74,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   background: url("https://imgur.com/5NGLfgO.jpg") no-repeat center center fixed;
 }
 
+.custshow {
+  background: url("https://imgur.com/57DiqtN.jpg") no-repeat center center fixed;
+}
+
 /*//////////// Forms ////////////*/
 
 .form {
@@ -103,18 +107,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 
 .need {
   color: #e60000;
+  font-weight: 700;
 }
 
 .running_low {
   color: #cccc00;
+  font-weight: 700;
 }
 
 .just_bought {
   color: #009933;
+  font-weight: 700;
 }
 
 .one_year {
   color: #660066;
+  font-weight: 700;
 }
 
 /*//////////// Box sizing ////////////*/
@@ -138,8 +146,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  background: white;
+  margin-bottom: 30px;
+  background: #f0e6f0;
   width: 90%;
 }
 
@@ -147,7 +155,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
-  background: purple;
   width: 40%;
   float: left;
   text-align: center;
@@ -222,10 +229,12 @@ html, body {
 
 #custname {
   font-size: 1.2em;
+  color: white;
 }
 
 #custcontact {
   font-size: 1em;
+  color: white;
 }
 
 /*//////////// Buttons ////////////*/

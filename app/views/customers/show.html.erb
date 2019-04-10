@@ -1,4 +1,5 @@
 <% require 'date' %>
+<div class="background custshow">
 <header class="medium-fade shadow">
   <div class="wrapper">
     <div id="logo">
@@ -37,8 +38,10 @@
 <br>
 <br>
 <br>
+<div class="Yeseva">
 <div class="section shadow">
 <p class="need">NEED: </p>
+
 
 <% @customer.items.each do |item| %>
 <% now = item.date.to_date %>
@@ -50,6 +53,7 @@
 <% end %>
 <% end %>
 </div>
+
 
 <div class="section shadow">
 <p class="running_low">RUNNING LOW: </p>
@@ -91,4 +95,6 @@
 </ul>
 <% end %>
 <% end %>
+</div>
+</div>
 </div>
