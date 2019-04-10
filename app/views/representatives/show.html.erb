@@ -1,3 +1,4 @@
+<div class="background rep">
 <header class="medium-fade shadow">
   <div class="wrapper">
     <div id="logo">
@@ -9,13 +10,20 @@
   </div>
 </header>
 
+<div class="Yeseva">
+  <div id="repname">
 <h1><%= @representative.name %></h1>
 <h3><%= @representative.territory %></h3>
+  </div>
+</div>
 <br>
 <p>Choose a customer below or <button><a href="/customers/new">Add A Customer</a></button></p>
 
+<div class="Yeseva">
 <ol>
   <% @representative.customers.each do |customer| %>
   <li><a href="/customers/<%= customer.slug %>"><%= customer.name%> - <%= customer.contact %></a></li>
   <% end %>
 </ol>
+</div>
+</div>

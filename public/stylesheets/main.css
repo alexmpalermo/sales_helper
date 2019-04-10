@@ -33,10 +33,10 @@ header {
 
 #link {
   position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 20px;
+    right: 35px;
     width: auto;
-    font-size: 1.15em;
+    font-size: 1.25em;
 }
 
 /*//////////// Backgrounds ////////////*/
@@ -60,6 +60,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 
 .signup {
   background: url("https://imgur.com/YfbRBVh.jpg") no-repeat center center fixed;
+}
+
+.rep {
+  background: url("https://imgur.com/5NGLfgO.jpg") no-repeat center center fixed;
 }
 
 /*//////////// Forms ////////////*/
@@ -149,6 +153,22 @@ html, body {
 
 #signuplogin {
  font-size: 1.75em;
+}
+
+.Yeseva {
+  font-family: 'Yeseva One', cursive;
+}
+
+#repname {
+  text-align: center;
+}
+
+#repname h1 {
+  font-size: 2.5em;
+}
+
+#repname h3 {
+  font-size: 1.75em;
 }
 
 /*//////////// Buttons ////////////*/
