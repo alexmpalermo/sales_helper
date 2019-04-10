@@ -134,6 +134,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   line-height: 0;
 }
 
+.section {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background: white;
+  width: 90%;
+}
+
+.customer {
+  padding: 1px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  background: purple;
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+
+#fix {
+  
+}
+
 /*//////////// Layout ////////////*/
 
 html, body {
@@ -218,6 +242,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4cee5', end
 
 button:hover {
   background: #A0318C; 
+}
+
+#editdelete {
+  font-size: 1.5em;
+  width: 200px;
+  height: 50px;
+}
+
+.move {
+  float: right;
+  margin-right: 200px;
+}
+
+.move2 {
+  float: left;
+  margin-left: 60px;
 }
 
 /*//////////// Links ////////////*/

@@ -14,13 +14,25 @@
 <a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
 </div>
 
-
+<div class="customer">
 <h1><%= @customer.name %></h1>
 <h3><%= @customer.contact %></h3>
+</div>
 <br>
-<button><a href ="/customers/<%= @customer.slug %>/edit">Edit Account</a></button>
-
-<div>
+<div class="move2">
+<button id="editdelete"><a href ="/customers/<%= @customer.slug %>/edit">Edit Account</a></button>
+</div>
+<div class="move">
+<button id="editdelete"><a href ="/customers/<%= @customer.slug %>/delete">Delete Account</a></button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="section shadow">
 <p class="need">NEED: </p>
 
 <% @customer.items.each do |item| %>
@@ -34,7 +46,7 @@
 <% end %>
 </div>
 
-<div>
+<div class="section shadow">
 <p class="running_low">RUNNING LOW: </p>
 
 <% @customer.items.each do |item| %>
@@ -48,7 +60,7 @@
 <% end %>
 </div> 
 
-<div>
+<div class="section shadow">
 <p class="just_bought">JUST BOUGHT: </p>
 
 <% @customer.items.each do |item| %>
@@ -62,7 +74,7 @@
 <% end %>
 </div>
 
-<div>
+<div class="section shadow">
 <p class="one_year">NOT PUCHASED IN OVER A YEAR: </p>
 
 <% @customer.items.each do |item| %>
