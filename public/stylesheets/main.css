@@ -167,6 +167,17 @@ html, body {
   font-family: 'Yeseva One', cursive;
 }
 
+.Yeseva h4 {
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.Yeseva ol {
+  font-size: 1.2em;
+  position: relative;
+  left: 450px;
+}
+
 #repname {
   text-align: center;
   padding: .02px;

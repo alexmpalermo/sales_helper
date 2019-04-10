@@ -22,6 +22,7 @@
 </div>
 
 <div class="Yeseva">
+  <h4>Accounts</h4>
 <ol>
   <% @representative.customers.each do |customer| %>
   <li><a href="/customers/<%= customer.slug %>"><%= customer.name%> - <%= customer.contact %></a></li>
