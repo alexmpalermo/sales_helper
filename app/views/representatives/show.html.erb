@@ -11,7 +11,7 @@
 </header>
 
 <div class="Yeseva">
-  <div id="repname" class="shadow">
+  <div id="repname">
 <h1><%= @representative.name %></h1>
 <h3><%= @representative.territory %></h3>
   </div>
@@ -22,11 +22,13 @@
 </div>
 
 <div class="Yeseva">
+  <div class="form shadow" id="list">
   <h4>Accounts</h4>
 <ol>
   <% @representative.customers.each do |customer| %>
   <li><a href="/customers/<%= customer.slug %>"><%= customer.name%> - <%= customer.contact %></a></li>
   <% end %>
 </ol>
+</div>
 </div>
 </div>

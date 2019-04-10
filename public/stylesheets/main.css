@@ -71,15 +71,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .rep {
-  background: url("https://imgur.com/5NGLfgO.jpg") no-repeat center center fixed;
+  background: url("https://imgur.com/n6ukvxY.jpg") no-repeat center center fixed;
 }
 
 .custshow {
   background: url("https://imgur.com/Rs5UI4T.jpg") no-repeat center center fixed;
 }
 
-.edit {
+.new {
   background: url("https://imgur.com/bhj8mcn.jpg") no-repeat center center fixed;
+}
+
+.edit {
+  background: url("https://imgur.com/Ylo4uTU.jpg") no-repeat center center fixed;
 }
 
 /*//////////// Forms ////////////*/
@@ -93,6 +97,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
   width: 30%;
   height: 530px;
   overflow: auto;
+}
+
+#list {
+  width: 40%;
+  padding: 5px;
+  height: 330px;
 }
 
 #signlog {
@@ -210,8 +220,6 @@ html, body {
 
 .Yeseva ol {
   font-size: 1.2em;
-  position: relative;
-  left: 450px;
 }
 
 #repname {
@@ -220,17 +228,18 @@ html, body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  background: #f7f2f7;
   width: 40%;
   
 }
 
 #repname h1 {
   font-size: 2.5em;
+  text-shadow: 0px 0px 4px #000000;
 }
 
 #repname h3 {
   font-size: 1.75em;
+  text-shadow: 0px 0px 4px #000000;
 }
 
 #custname {
