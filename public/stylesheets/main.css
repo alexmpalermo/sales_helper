@@ -79,7 +79,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c0e2', end
 }
 
 .edit {
-  background: url("https://imgur.com/2RkSa9H.jpg") no-repeat center center fixed;
+  background: url("https://imgur.com/bhj8mcn.jpg") no-repeat center center fixed;
 }
 
 /*//////////// Forms ////////////*/
@@ -298,8 +298,3 @@ a:visited {
 
 /*//////////// Footer ////////////*/
 
-footer {
-  padding: 10px;
-  background: #E1C0E2;
-  border-top: 1px solid;
-}
