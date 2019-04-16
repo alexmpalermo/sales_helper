@@ -31,6 +31,7 @@ class RepresentativesController < ApplicationController
     @representative = Representative.find_by_slug(params[:slug])
     erb :"/representatives/show.html"
   end 
+end 
   
   post '/login' do
     if params[:username] != "" &&  params[:password] != "" 
