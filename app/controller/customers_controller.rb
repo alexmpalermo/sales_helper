@@ -12,7 +12,7 @@ class CustomersController < ApplicationController
   end
   
   get '/customers/:slug' do 
-    if logged_in?
+    if logged_in? && session[:representative_id] == current_user.id
     @customer = Customer.find_by_slug(params[:slug])
   
     erb :"/customers/show.html"
@@ -22,7 +22,7 @@ class CustomersController < ApplicationController
   end 
   
   get '/customers/:slug/edit' do 
-    if logged_in?
+    if logged_in? && session[:representative_id] == current_user.id
     @customer = Customer.find_by_slug(params[:slug])
     erb :"/customers/edit.html"
   else 

@@ -2,8 +2,7 @@ class RepresentativesController < ApplicationController
   
   get '/login' do
      if logged_in?
-       @representative = current_user
-      redirect to "/representatives/#{@representative.slug}"
+      redirect to "/representatives/#{current_user.slug}"
       else 
     erb :"/representatives/login.html"
     end
@@ -28,6 +27,7 @@ class RepresentativesController < ApplicationController
   end 
   
   get '/representatives/:slug' do 
+   if logged_in? && session[:representative_id] == current_user.id
     @representative = Representative.find_by_slug(params[:slug])
     erb :"/representatives/show.html"
   end 
@@ -48,6 +48,7 @@ class RepresentativesController < ApplicationController
   
   post '/signup' do 
     if params[:username] != "" &&  params[:password] != "" && params[:name] != ""
+    
     @representative = Representative.create(username: params[:username], password: params[:password], name: params[:name], territory: params[:territory])
     session[:representative_id] = @representative.id 
     redirect to "/representatives/#{@representative.slug}"
