@@ -11,14 +11,14 @@
 </header>
 
 <div class="addcust">
-<a href="/representatives/<%= @customer.representative.slug %>">Accounts</a>
+<a href="/representatives/<%= @customer.representative.id %>">Accounts</a>
 </div>
 
 <div class="form shadow">
   <div id="signlog">
   <h2>Edit this customer</h2>
   </div>
-<form action="/customers/<%= @customer.slug %>" method="POST">
+<form action="/customers/<%= @customer.id %>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch" />
   <label>Account name: </label>
   <br>
