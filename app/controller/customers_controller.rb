@@ -11,20 +11,27 @@ class CustomersController < ApplicationController
   end 
   end
   
-  get '/customers/:slug' do 
-    if logged_in? && session[:representative_id] == current_user.id
-    @customer = Customer.find_by_slug(params[:slug])
-  
+  get '/customers/:id' do 
+    if logged_in?
+    @customer = Customer.find_by_id(params[:id])
+      if @customer.representative == current_user
     erb :"/customers/show.html"
+  else 
+    redirect to "/login"
+  end 
   else 
     redirect to "/login"
   end 
   end 
   
-  get '/customers/:slug/edit' do 
-    if logged_in? && session[:representative_id] == current_user.id
-    @customer = Customer.find_by_slug(params[:slug])
+  get '/customers/:id/edit' do 
+    if logged_in? 
+    @customer = Customer.find_by_id(params[:id])
+    if @customer.representative == current_user
     erb :"/customers/edit.html"
+    else 
+    redirect to "/login"
+  end
   else 
     redirect to "/login"
   end 
@@ -46,12 +53,12 @@ class CustomersController < ApplicationController
         redirect to "/customers/new"
       end 
       end
-    redirect to "/customers/#{@customer.slug}"
+    redirect to "/customers/#{@customer.id}"
     
   end 
   
-  patch '/customers/:slug' do 
-    @customer = Customer.find_by_slug(params[:slug])
+  patch '/customers/:id' do 
+    @customer = Customer.find_by_id(params[:id])
     if params[:customer][:name] != "" 
     @customer.update(name: params[:customer][:name])
   end 
@@ -72,17 +79,17 @@ class CustomersController < ApplicationController
         @customer.save 
       end 
     end 
-      redirect to "/customers/#{@customer.slug}"
+      redirect to "/customers/#{@customer.id}"
   end 
   
-  delete '/customers/:slug/delete' do 
+  delete '/customers/:id/delete' do 
    if logged_in?
-    @customer = Customer.find_by_slug(params[:slug])
+    @customer = Customer.find_by_id(params[:id])
     @representative = Representative.find_by_id(@customer.representative_id)
     if @representative == current_user 
     @customer.destroy
   end
-    redirect to "/representatives/#{@representative.slug}"
+    redirect to "/representatives/#{@representative.id}"
   end 
   end
 end
