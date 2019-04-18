@@ -4,53 +4,52 @@ class CustomersController < ApplicationController
  
   
   get '/customers/new' do 
-    if logged_in?
-    erb :"/customers/new.html"
-  else 
-    redirect to "/"
-  end 
+    redirect_if_not_logged_in
+      erb :"/customers/new.html"
   end
   
   get '/customers/:id' do 
-    if logged_in?
+   redirect_if_not_logged_in
     @customer = Customer.find_by_id(params[:id])
       if @customer.representative == current_user
     erb :"/customers/show.html"
   else 
     redirect to "/login"
   end 
-  else 
-    redirect to "/login"
-  end 
   end 
   
   get '/customers/:id/edit' do 
-    if logged_in? 
+    redirect_if_not_logged_in 
     @customer = Customer.find_by_id(params[:id])
     if @customer.representative == current_user
     erb :"/customers/edit.html"
     else 
     redirect to "/login"
   end
-  else 
-    redirect to "/login"
-  end 
   end 
   
   post '/customers' do 
+     if params[:customer][:name] != "" &&  params[:customer][:contact] != "" 
     @customer = Customer.create(params[:customer])
+  else 
+    redirect to "/customers/new"
+    end 
     @customer.representative = current_user
     @date = Date.today.to_formatted_s(:long)
     
     params[:items].each do |details|
     
       if details[:name] != "" && details[:quantity] != ""
-        @item = Item.create(details)
-        @item.date = @date 
-        @customer.items << @item 
-        @customer.save
-      else 
-        redirect to "/customers/new"
+        
+        item = @customer.items.build(date: @date, name: details[:name], quantity: details[:quantity])
+        item.save 
+        
+        #@item = Item.create(details)
+       # @item.date = @date 
+       # @customer.items << @item 
+       # @customer.save
+      #else 
+        #redirect to "/customers/new"
       end 
       end
     redirect to "/customers/#{@customer.id}"
@@ -59,6 +58,9 @@ class CustomersController < ApplicationController
   
   patch '/customers/:id' do 
     @customer = Customer.find_by_id(params[:id])
+   if !logged_in? || @customer.representative != current_user
+     redirect to "/login"
+   end 
     if params[:customer][:name] != "" 
     @customer.update(name: params[:customer][:name])
   end 
@@ -83,7 +85,7 @@ class CustomersController < ApplicationController
   end 
   
   delete '/customers/:id/delete' do 
-   if logged_in?
+   redirect_if_not_logged_in
     @customer = Customer.find_by_id(params[:id])
     @representative = Representative.find_by_id(@customer.representative_id)
     if @representative == current_user 
@@ -92,4 +94,3 @@ class CustomersController < ApplicationController
     redirect to "/representatives/#{@representative.id}"
   end 
   end
-end

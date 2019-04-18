@@ -55,7 +55,7 @@ end
   post '/signup' do 
     if params[:username] != "" &&  params[:password] != "" && params[:name] != ""
       if Representative.find_by(:username => params[:username])
-        session.clear
+        #session.clear
         redirect to "/signup"
       end 
     @representative = Representative.create(username: params[:username], password: params[:password], name: params[:name], territory: params[:territory])

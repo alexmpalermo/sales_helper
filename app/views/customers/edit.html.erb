@@ -22,13 +22,13 @@
   <input type="hidden" id="hidden" name="_method" value="patch" />
   <label>Account name: </label>
   <br>
-  <label for="name"><%= @customer.name %></label>
-  <input type="text" name="customer[name]" id="name" />
+  
+  <input type="text" name="customer[name]" id="name" value="<%= @customer.name %>"/>
   <br>
   <label>Contact name: </label>
   <br>
-  <label for="contact"><%= @customer.contact %></label>
-  <input type="text" name="customer[contact]" id="contact" />
+ 
+  <input type="text" name="customer[contact]" id="contact" value="<%= @customer.contact %>"/>
   <br>
   <br>
   <label>Quantity: </label>
